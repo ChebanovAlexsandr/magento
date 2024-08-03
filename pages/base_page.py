@@ -1,6 +1,4 @@
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 
 
 class BasePage:
@@ -8,7 +6,6 @@ class BasePage:
     page_url = None
 
     def __init__(self, driver: WebDriver):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
         self.driver = driver
 
     def open_page(self):
